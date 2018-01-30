@@ -178,6 +178,12 @@ nosql缓存相关：
 
 找时间看一点设置模式相关的书
 
+加密相关：
+   非对称加密算法：rsa
+   对称加密算法：DES
+   DH密钥交换:
+   
+
 
 作者：雨baby
 链接：https://www.nowcoder.com/discuss/1864
