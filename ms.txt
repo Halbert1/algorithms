@@ -25,7 +25,9 @@ redis
 
 算法：
 
-一致性hash
+1, 一致性hash
+2, 有40亿个无符号(有符号)乱序整数的大文件，只使用1g内存，如何将这个文件排序。
+
 
 google笔试题:
 http://blog.csdn.net/yingxunren/article/details/3968800
