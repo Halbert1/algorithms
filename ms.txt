@@ -26,7 +26,11 @@
 #################################
 
 
-nginx
+nginx:
+nginx是如何处理惊群事件的:简单来说，nginx通过共享锁，允许同一时间内只有一个worker进程优先在epoll_wait里面处理监听socket句柄的事件(这个时间内会将其它socket句柄的事件延后处理)。
+nginx实现多进程负载均衡：每一个进程有一个最大连接数配置，如果进程连接数达到最大配置的7/8，将会暂缓处理accept的操作。
+参考：https://blog.csdn.net/russell_tao/article/details/7204260
+
 redis
 
 
