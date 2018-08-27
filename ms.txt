@@ -241,3 +241,9 @@ a[i][j][k]=0;?? 答：把循环语句内外换一下 7.?请写出下列代码的
 ??if?(?a?<?EXP?&&?a?>-EXP)
 ??pointer?:?if?(?a?!=?NULL) 9.已知strcpy?函数的原型是： ??char?*strcpy(char?*strDest,?const?char?*strSrc); 其中strDest?是目的字符串，strSrc?是源字符串。不调用C++/C?的字符串库函数，请编写函数?strcpy 答：  10.写一个函数找出一个整数数组中，第二大的数。 答：  
 网易游戏2015
+
+
+http协议：
+1，http头：
+   *http chunk请求:
+   *HTTP/1.1 协议Expect: 100-continue  ：
