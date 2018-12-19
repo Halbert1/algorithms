@@ -282,3 +282,7 @@ TODO
 TODO
 *熟悉linux文件系统
 TODO
+
+
+x509证书相关：
+https://zhuanlan.zhihu.com/p/36832100
