@@ -1,0 +1,17 @@
+1, 输入一颗二叉树的根节点，判断该树是不是平衡二叉树。
+
+2，用单链表实现归并排序算法
+#include <iostream> 
+using namespace std;  
+struct node {   
+  int data;   
+  struct node* next;  
+  node(int x):data(x),next(NULL){} 
+}
+
+void sort(node *head) {
+}
+
+3，c++求无序数组中位数
+
+4，给定一个整数数组，求a[i] + a[j] + i - j的最大值
