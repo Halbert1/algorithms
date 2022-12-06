@@ -1,6 +1,35 @@
 1, 输入一颗二叉树的根节点，判断该树是不是平衡二叉树。
 
-2，用单链表实现归并排序算法
+2，归并排序
+void merge(int srcArr[], int tmpArr[], int start, int mid, int end) {
+  int i = start, j=mid+1, k = start;
+  while(i!=mid+1 && j!=end+1)
+  {
+    if(srcArr[i] > srcArr[j])
+      tmpArr[k++] = srcArr[j++];
+    else
+      tmpArr[k++] = srcArr[i++];
+  }
+  while(i != mid+1)
+    tmpArr[k++] = srcArr[i++];
+  while(j != end+1)
+    tmpArr[k++] = srcArr[j++];
+  for(i=start; i<=end; i++)
+    srcArr[i] = tmpArr[i];
+}
+
+void merge_sort(int srcArr[], int tmpArr[], int start, int end) {
+  int mid;
+  if(start < end) {
+    mid = start + (end-start)/2;
+    merge_sort(srcArr, tmpArr, start, mid);
+    merge_sort(srcArr, tmpArr, mid+1, end);
+    merge(srcArr, tmpArr, start, mid, end);
+  }
+}
+
+用单链表实现归并排序算法
+
 #include <iostream> 
 using namespace std;  
 struct node {   
