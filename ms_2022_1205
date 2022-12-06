@@ -38,7 +38,43 @@ struct node {
   node(int x):data(x),next(NULL){} 
 }
 
-void sort(node *head) {
+node *merge(node *left, node *right) {
+  node *result = NULL, *p = NULL;
+  while(left && right) {
+    node *tmp = NULL;
+    if(left->data < right->data) {
+      tmp = left;
+      left = left->next;
+    } else {
+      tmp = right;
+      right = right->next;
+    }   
+    if(!result) {
+      result = p = tmp;
+    }else {
+      p->next = tmp;
+      p = p->next;
+    }   
+  }
+  if(left) {
+    p->next = left;
+  }
+  if(right) {
+    p->next = right;
+  }
+  return result;
+}
+
+node *merge_sort(node *head) {
+  if(!head || !head->next) {
+    return head;
+  }
+  node *mid = get_mid_node(head);
+  node *tmp = mid->next;
+  mid->next = NULL;
+  node *left = merge_sort(head);
+  node *right = merge_sort(tmp);
+  return merge(left, right);
 }
 
 3，c++求无序数组中位数
